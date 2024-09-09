@@ -16,9 +16,7 @@ This project involves designing a weighted moving average filter in three differ
     - [Resource Utilization](#resource-utilization)
     - [Performance](#performance)
 6. [Testbench](#testbench)
-7. [How to Run](#how-to-run)
-8. [Conclusion](#conclusion)
-9. [Future Work](#future-work)
+7. [Conclusion](#conclusion)
 
 ## Introduction
 This project implements a DSP filter as a weighted moving average filter with coefficients `[1, 0.5, 0.25, 0.125]`. The filter was implemented in three ways:
