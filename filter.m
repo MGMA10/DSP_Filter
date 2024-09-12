@@ -10,8 +10,8 @@ H4 = 0.125;
 
 % Open files to write input and output
 % As i wanna use it in the testbench
-input_file = fopen('input.txt', 'w');
-output_file = fopen('output.txt', 'w');
+input_file = fopen('input1.txt', 'w');
+output_file = fopen('output1.txt', 'w');
 
 % Number of clock cycles to simulate
 % As thier is no clock here in matlab so i will simulate one 
@@ -36,11 +36,12 @@ x = randi([0, 2^N-1], 1, num_cycles);
 
 for i = 1:num_cycles
     % Shift delayed values
+    delayed_x(4) = delayed_x(3);
     delayed_x(3) = delayed_x(2);
     delayed_x(2) = delayed_x(1);
     delayed_x(1) = x(i);
     % Compute the output
-    y(i) = H1 * x(i) + H2 * delayed_x(1) + H3 * delayed_x(2) + H4 * delayed_x(3);
+    y(i) = floor(H1 * delayed_x(1)) + floor(H2 * delayed_x(2)) + floor(H3 * delayed_x(3)) + floor(H4 * delayed_x(4));
     
     % Write input and output to files
     fprintf(input_file, '%X\n', x(i));      % Write input as hexadecimal

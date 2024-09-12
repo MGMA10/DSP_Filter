@@ -24,7 +24,7 @@ module DSP_Filter_tb2;
         .y(y)
     );
 */
-    fiter_model dut
+gm_fiter_model dut
           (clk,
            rst,
            clk_enable,

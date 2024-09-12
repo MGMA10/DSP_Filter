@@ -22,7 +22,7 @@ Model {
       DataTypeExpr	      "uint8"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.6"
+    ComputedModelVersion    "1.7"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -126,9 +126,9 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1807.0, 744.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
-	  SceneRectInView	  [0.0, 0.0, 1445.6, 595.2]
+	  ZoomFactor		  [3.1267916207276745]
+	  Offset		  [383.83653032440066, 158.5225669957687]
+	  SceneRectInView	  [383.83653032440066, 158.5225669957687, 462.32693935119875, 190.35486600846258]
 	}
 	Object {
 	  $ObjectID		  7
@@ -201,9 +201,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "MGMA"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Sep 09 19:09:49 2024"
-  RTWModifiedTimeStamp	  647812385
-  ModelVersionFormat	  "%<AutoIncrement:1.6>"
+  LastModifiedDate	  "Mon Sep 09 19:53:45 2024"
+  RTWModifiedTimeStamp	  647814268
+  ModelVersionFormat	  "%<AutoIncrement:1.7>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1248,7 +1248,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "313"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "51"
     SimulinkSubDomain	    "Simulink"
@@ -1256,7 +1256,7 @@ Model {
       BlockType		      Inport
       Name		      "x"
       SID		      "37"
-      Position		      [300, 228, 330, 242]
+      Position		      [410, 228, 440, 242]
       ZOrder		      290
       OutDataTypeStr	      "uint8"
     }
@@ -1265,7 +1265,7 @@ Model {
       Name		      "Bit Shift1"
       SID		      "39"
       Ports		      [1, 1]
-      Position		      [486, 310, 524, 360]
+      Position		      [511, 230, 549, 280]
       ZOrder		      296
       BlockRotation	      270
       BlockMirror	      on
@@ -1288,7 +1288,7 @@ Model {
       Name		      "Bit Shift2"
       SID		      "40"
       Ports		      [1, 1]
-      Position		      [611, 310, 649, 360]
+      Position		      [616, 230, 654, 280]
       ZOrder		      297
       BlockRotation	      270
       BlockMirror	      on
@@ -1311,7 +1311,7 @@ Model {
       Name		      "Bit Shift3"
       SID		      "41"
       Ports		      [1, 1]
-      Position		      [726, 310, 764, 360]
+      Position		      [701, 230, 739, 280]
       ZOrder		      298
       BlockRotation	      270
       BlockMirror	      on
@@ -1334,7 +1334,7 @@ Model {
       Name		      "Delay"
       SID		      "49"
       Ports		      [1, 1]
-      Position		      [435, 128, 470, 162]
+      Position		      [480, 163, 515, 197]
       ZOrder		      299
       InputPortMap	      "u0"
       DelayLength	      "1"
@@ -1345,7 +1345,7 @@ Model {
       Name		      "Delay1"
       SID		      "50"
       Ports		      [1, 1]
-      Position		      [545, 128, 580, 162]
+      Position		      [570, 163, 605, 197]
       ZOrder		      300
       InputPortMap	      "u0"
       DelayLength	      "1"
@@ -1356,7 +1356,7 @@ Model {
       Name		      "Delay2"
       SID		      "51"
       Ports		      [1, 1]
-      Position		      [655, 128, 690, 162]
+      Position		      [660, 163, 695, 197]
       ZOrder		      301
       InputPortMap	      "u0"
       DelayLength	      "1"
@@ -1367,7 +1367,7 @@ Model {
       Name		      "Sum"
       SID		      "45"
       Ports		      [2, 1]
-      Position		      [550, 385, 570, 405]
+      Position		      [550, 305, 570, 325]
       ZOrder		      287
       Inputs		      "|++"
     }
@@ -1376,7 +1376,7 @@ Model {
       Name		      "Sum1"
       SID		      "46"
       Ports		      [2, 1]
-      Position		      [675, 385, 695, 405]
+      Position		      [675, 305, 695, 325]
       ZOrder		      288
       Inputs		      "|++"
     }
@@ -1385,7 +1385,7 @@ Model {
       Name		      "Sum2"
       SID		      "47"
       Ports		      [2, 1]
-      Position		      [775, 385, 795, 405]
+      Position		      [735, 305, 755, 325]
       ZOrder		      289
       Inputs		      "|++"
     }
@@ -1393,7 +1393,7 @@ Model {
       BlockType		      Outport
       Name		      "y"
       SID		      "48"
-      Position		      [890, 388, 920, 402]
+      Position		      [790, 308, 820, 322]
       ZOrder		      291
       OutDataTypeStr	      "uint8"
     }
@@ -1401,7 +1401,6 @@ Model {
       ZOrder		      72
       SrcBlock		      "Bit Shift3"
       SrcPort		      1
-      Points		      [0, 30]
       DstBlock		      "Sum2"
       DstPort		      1
     }
@@ -1409,7 +1408,7 @@ Model {
       ZOrder		      90
       SrcBlock		      "Delay"
       SrcPort		      1
-      Points		      [30, 0]
+      Points		      [10, 0]
       Branch {
 	ZOrder			92
 	DstBlock		"Delay1"
@@ -1425,7 +1424,7 @@ Model {
       ZOrder		      97
       SrcBlock		      "Delay2"
       SrcPort		      1
-      Points		      [50, 0]
+      Points		      [20, 0]
       DstBlock		      "Bit Shift3"
       DstPort		      1
     }
@@ -1433,16 +1432,16 @@ Model {
       ZOrder		      88
       SrcBlock		      "x"
       SrcPort		      1
-      Points		      [65, 0]
+      Points		      [15, 0]
       Branch {
 	ZOrder			99
-	Points			[0, 185]
+	Points			[0, 109; 100, 0]
 	DstBlock		"Sum"
 	DstPort			2
       }
       Branch {
 	ZOrder			89
-	Points			[0, -90]
+	Points			[0, -55]
 	DstBlock		"Delay"
 	DstPort			1
       }
@@ -1451,15 +1450,15 @@ Model {
       ZOrder		      93
       SrcBlock		      "Delay1"
       SrcPort		      1
-      Points		      [45, 0]
+      Points		      [25, 0]
       Branch {
-	ZOrder			96
-	DstBlock		"Bit Shift2"
+	ZOrder			102
+	DstBlock		"Delay2"
 	DstPort			1
       }
       Branch {
-	ZOrder			95
-	DstBlock		"Delay2"
+	ZOrder			96
+	DstBlock		"Bit Shift2"
 	DstPort			1
       }
     }
@@ -1467,7 +1466,7 @@ Model {
       ZOrder		      81
       SrcBlock		      "Sum"
       SrcPort		      1
-      Points		      [26, 0; 0, 34; 84, 0]
+      Points		      [26, 0; 0, 24; 84, 0]
       DstBlock		      "Sum1"
       DstPort		      2
     }
@@ -1482,7 +1481,7 @@ Model {
       ZOrder		      83
       SrcBlock		      "Sum1"
       SrcPort		      1
-      Points		      [21, 0; 0, 34; 64, 0]
+      Points		      [9, 0; 0, 21; 36, 0]
       DstBlock		      "Sum2"
       DstPort		      2
     }

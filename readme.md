@@ -16,7 +16,9 @@ This project involves designing a weighted moving average filter in three differ
     - [Resource Utilization](#resource-utilization)
     - [Performance](#performance)
 6. [Testbench](#testbench)
-7. [Conclusion](#conclusion)
+7. [How to Run](#how-to-run)
+8. [Conclusion](#conclusion)
+9. [Future Work](#future-work)
 
 ## Introduction
 This project implements a DSP filter as a weighted moving average filter with coefficients `[1, 0.5, 0.25, 0.125]`. The filter was implemented in three ways:
@@ -112,25 +114,35 @@ module DSP_Filter #(parameter N=7)(
     output reg [N:0] y
 );
 
-reg [N:0] delayed_x [2:0];
+reg [N:0] delayed_x [3:0];
 
 always @(posedge clk or negedge rst) begin
-    if (!rst) begin
+    if (!rst)begin
         delayed_x[0] <= 0;
-        delayed_x[1] <= 0;
-        delayed_x[2] <= 0;
-    end else begin
-        delayed_x[2] <= delayed_x[1];
-        delayed_x[1] <= delayed_x[0];
-        delayed_x[0] <= x;
+    delayed_x[1] <= 0;
+    delayed_x[2] <= 0;
+    delayed_x [3] <= 0;
+    end
+    else
+    begin
+        delayed_x [3] <= delayed_x[2];
+        delayed_x [2] <= delayed_x[1];
+        delayed_x [1] <= delayed_x[0];
+        delayed_x [0] <= x; 
     end
 end
 
 always @(*) begin
-    y = x + (delayed_x[0] * 0.5) + (delayed_x[1] * 0.25) + (delayed_x[2] * 0.125);
+     y =  (delayed_x [0] ) + (delayed_x [1] * 0.5) +(delayed_x [2] * 0.25) + (delayed_x [3] * 0.125); 
 end
+
 endmodule
 ```
+**Note**
+
+`y = x + (delayed_x [0] >> H2) + (delayed_x [1] >> H3) +(delayed_x [2] >> H4);`  have a degree of error but it is smaall.
+
+`y =  (delayed_x [0] ) + (delayed_x [1] * 0.5) +(delayed_x [2] * 0.25) + (delayed_x [3] * 0.125);`  Accurate but need alot of resources.
 
 ## Comparison
 
